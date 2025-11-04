@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgb(49, 39, 39);
     display: flex;
     min-height: 100vh;  /* Add this */
     flex-direction: column;
@@ -10,26 +10,41 @@ body {
 }
 
 .displayContainer {
-    background-color: aliceblue;
-    height: 4rem;
-    width: 30rem;
-    margin: 5rem;
+    background-image: url('images/darkmode/calcDisplay.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: auto;
+    padding: 45px 140px;
+
+    object-fit: contain; /*keeps aspect ratio*/
+    image-rendering: pixelated;  /* Chrome/Edge */
+    image-rendering: crisp-edges; /* Firefox/Safari fallback */
 }
 
 .calculatorContainer {
-    background-color: rgb(49, 49, 49);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 50rem;
-    width: 30rem;
+    background-image: url('images/darkmode/calcBG.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: auto;
+    padding: 20px 100px;
+    object-fit: contain; /*keeps aspect ratio*/
+    /*pixel art rendering:*/
+    image-rendering: pixelated;  /* Chrome/Edge */
+    image-rendering: crisp-edges; /* Firefox/Safari fallback */
+
+
+    transform: scale(1.7)
 }
 
 .buttonsContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    gap: 5px
 }
 
 .buttonsContainer button {
@@ -40,8 +55,6 @@ body {
     border: none;
     background: none;
     cursor: pointer;
-    
-    width: 100px;
 }
 
 .add { grid-row: span 2; }
