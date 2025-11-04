@@ -6,6 +6,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0px;
 }
 
 .displayContainer {
@@ -29,13 +30,29 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 0.625rem;
 }
 
 .buttonsContainer button {
     color: transparent;
     background-size: cover;
-    font-size: 10px;
+    background-repeat: no-repeat;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    
+    width: 100px;
 }
 
 .add { grid-row: span 2; }
+
+button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*keeps aspect ratio*/
+    /*pixel art rendering:*/
+    image-rendering: pixelated;  /* Chrome/Edge */
+    image-rendering: crisp-edges; /* Firefox/Safari fallback */
+}
+}
