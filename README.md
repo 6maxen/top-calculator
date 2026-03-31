@@ -1,4 +1,4 @@
-👉Live Demo [NO JAVASCRIPT]: https://6maxen.github.io/top-calculator/
+👉Live Demo [NOT FUNCTIONAL]: https://6maxen.github.io/calculator-v1/
 
 _Built as part of The Odin Project curriculum_ 🧙‍♂️
 
